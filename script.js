@@ -22,17 +22,13 @@ function createGrid(size){
         let cell = document.createElement('div');
         cell.classList.add('grid');
         container.appendChild(cell);
-        cell.addEventListener('mouseover', function(e) {
-        
-            this.setAttribute('style', 'background-color: black;');
-        });
-        
-    }
+        cell.addEventListener('mouseover', divColor)
+}
 }
 
 
 function getSize() {
-    num = +(prompt("enter number for square grid", ''))
+    num = +(prompt("enter the number of squares for grid.", ''))
 
     if (num <= 100) {
       
@@ -46,3 +42,27 @@ else {
     alert("100 is the limit");
 }
 }
+ 
+
+function divColor() {
+  
+    if (color == "random") {
+    this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`
+    }
+
+       
+     else if (color == "black") {
+        this.setAttribute('style', 'background-color: black;');
+        };
+
+        //else {
+           // this.setAttribute('style', 'background-color: white;');
+       // }
+}
+
+function colorPick(colorChoice) {
+    color = colorChoice;
+
+}
+
+
