@@ -11,12 +11,13 @@ body {
         
 }
 
-.new {
+button {
     padding: 10px;
     border-radius: 5px;
     background-color: rgb(60, 184, 255);
     margin-bottom: 2px;
     color: white;
+    width: 160px;
 }
 #container {
   border:1px solid #000;
@@ -34,4 +35,18 @@ body {
     margin:0;
     padding:0;
     border:1px solid #000;
+    }
+
+    .color {
+        display: flex;
+        margin-top: 10px;
+        justify-content: space-between;
+       
+    }
+
+    .black {
+        background-color: #000;
+    }
+    .random {
+        background: linear-gradient(45deg, red, orange,yellow, blue, indigo, violet, red);
     }
