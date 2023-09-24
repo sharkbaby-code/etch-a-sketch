@@ -1,9 +1,9 @@
 
-//let num = +(prompt("Number of Squares", ''));
+let color = "white";
 
 
-document.addEventListener("DOMContentLoaded", function() {
-   //createGrid(16);
+document.addEventListener("DOMContentLoaded",
+ function() {
    let btn = document.querySelector('.new');
    btn.addEventListener('click', function(){
    getSize();
@@ -42,7 +42,7 @@ else {
     alert("100 is the limit");
 }
 }
- 
+
 
 function divColor() {
   
@@ -53,16 +53,22 @@ function divColor() {
        
      else if (color == "black") {
         this.setAttribute('style', 'background-color: black;');
-        };
+        }
 
-        //else {
-           // this.setAttribute('style', 'background-color: white;');
-       // }
+        else if (color == "white") {
+           this.setAttribute('style', 'background-color: white;');
+        }
 }
 
 function colorPick(colorChoice) {
     color = colorChoice;
-
 }
 
 
+function resetDiv() {
+    let clear = document.querySelectorAll('.grid');
+    clear.forEach((grid) =>
+        grid.style.backgroundColor = "white");
+
+        color = "white";
+}
